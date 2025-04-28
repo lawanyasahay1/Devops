@@ -88,14 +88,23 @@ This will allow you to run docker commands without sudo.
 
 # Step	Command	Explanation
 1	sudo apt-get update -y	Refreshes the package list.
+
 2	sudo apt-get install -y ca-certificates curl gnupg lsb-release	Installs dependencies needed for Docker.
+
 3	Add GPG key using curl and gpg --dearmor	Secures Docker downloads by verifying authenticity.
+
 4	Setup Docker repository in /etc/apt/sources.list.d/docker.list	Tells the system where to find Docker packages.
+
 5	sudo apt-get update -y	Reloads package lists including the new Docker repo.
+
 6	sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin	Installs Docker and its essential components.
+
 7	sudo usermod -aG docker $(whoami)	Adds your user to the Docker group to avoid using sudo.
+
 8	sudo systemctl start docker and sudo systemctl enable docker	Starts Docker and ensures it starts on reboot.
+
 9	Echo a success message	Informs you that installation completed successfully.
+
 # ⚡ Quick Summary for Explaining
 We update the system.
 
